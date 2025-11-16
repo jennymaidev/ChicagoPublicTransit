@@ -115,9 +115,9 @@ As a result of the completed data cleaning and filtering, we performed an initia
 
 | Metric | Value | Interpretation |
 | :--- | :--- | :--- |
-| **RQ 1: Correlation (Distance vs. Sale Price)** | -0.231 | We observed a statistically significant negative correlation. In this context, a negative correlation implies that as the distance to the station increases, the sale price decreases. This preliminarily supports the hypothesis that proximity to transit is associated with higher property values. |
+| **RQ 1: Correlation (Distance vs. Sale Price)** | -0.22 | We observed a statistically significant negative correlation. In this context, a negative correlation implies that as the distance to the station increases, the sale price decreases. This preliminarily supports the hypothesis that proximity to transit is associated with higher property values. |
 | **RQ 2: Correlation (CTA Line Number vs. Sale Price)** | 0.107 | We observed weak correlations between specific line colors and price. This suggests that while location matters, the specific line (Red vs. Blue) may be less of a driver of price than the distance itself or the neighborhood characteristics. |
-| **RQ 3: Model Fit (R²)** | 0.392 | Our initial regression model, which accounts for both distance and the specific type of single-family home (Class), explains approximately 39% of the variance in sale price. This is a promising start for a real estate model using only two primary variables. |
+| **RQ 3: Model Fit (R²)** | 0.377 | Our initial regression model, which accounts for both distance and the specific type of single-family home (Class), explains approximately 38% of the variance in sale price. This is a promising start for a real estate model using only two primary variables. |
 
 These initial findings confirm that the integrated and cleaned dataset is suitable for statistical analysis. The data behaves as expected for the domain (showing a "transit premium"), validating the quality of our cleaning pipeline.
 

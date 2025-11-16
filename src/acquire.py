@@ -45,13 +45,15 @@ def download_cta_data(url, filepath):
 
 def main():
     """Main function to ensure directory exists and run all downloads."""
-    os.makedirs(RAW_DATA_DIR, exist_ok=True)
+    # os.makedirs(RAW_DATA_DIR, exist_ok=True)
     
-    # Download Dataset 1: Parcel Sales
-    download_sales_data(SALES_DATA_URL, SALES_DATA_FILE)
+    # # Download Dataset 1: Parcel Sales
+    # download_sales_data(SALES_DATA_URL, SALES_DATA_FILE)
     
-    # Download Dataset 3: CTA Rail Stations
-    download_cta_data(CTA_STATIONS_URL, CTA_STATIONS_FILE)
+    # # Download Dataset 3: CTA Rail Stations
+    # download_cta_data(CTA_STATIONS_URL, CTA_STATIONS_FILE)
+
+    
 
 if __name__ == '__main__':
     main()
