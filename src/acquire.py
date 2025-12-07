@@ -6,10 +6,10 @@ import json
 RAW_DATA_DIR = '../data/raw/'
 
 SALES_DATA_URL = 'https://datacatalog.cookcountyil.gov/resource/wvhk-k5uv.csv?$limit=3000000'
-SALES_DATA_FILE = os.path.join(RAW_DATA_DIR, 'sales_data.csv')
+SALES_DATA_FILE = os.path.join(RAW_DATA_DIR, 'sales_data_raw.csv')
 
 CTA_STATIONS_URL = 'https://data.cityofchicago.org/api/geospatial/8pix-ypme?method=export&format=geojson'
-CTA_STATIONS_FILE = os.path.join(RAW_DATA_DIR, 'cta_l_stops2.geojson')
+CTA_STATIONS_FILE = os.path.join(RAW_DATA_DIR, 'cta_l_stops.geojson')
 
 
 def download_sales_data(url, filepath):

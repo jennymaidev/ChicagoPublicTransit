@@ -215,7 +215,7 @@ jupyter notebook notebooks/01_data_acquisition.ipynb
 This notebook downloads three datasets: Cook County Parcel Sales (CSV), Cook County Parcel Universe locations (via Socrata API), and CTA station locations (GeoJSON). The notebook includes error handling and retry logic for network timeouts and implements checksum verification (SHA-256) to detect corruption during download.
 
 Raw datasets will be saved to `data/raw/` with the following filenames:
-- `sales_data.csv` (2.6 GB; 2.62 million records)
+- `sales_data_raw.csv` (2.6 GB; 2.62 million records)
 - `cta_l_stops.geojson` (18 KB; 145 stations)
 
 Expected runtime: 10 minutes depending on network bandwidth. The notebooks include progress indicators and estimated time remaining.

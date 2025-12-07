@@ -7,7 +7,7 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 
 ## Raw Data (`data/raw/`)
 
-### 1. `sales_data.csv`
+### 1. `sales_data_raw.csv`
 **Source**: Cook County Assessor - Parcel Sales  
 **Description**: Complete residential property sales records from Cook County
 
@@ -30,7 +30,7 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 
 ---
 
-### 2. `cta_l_stops.geojson` / `cta_l_stops2.geojson`
+### 2. `cta_l_stops.geojson`
 **Source**: City of Chicago Open Data - CTA 'L' Rail Stations  
 **Description**: Geographic coordinates and metadata for all 145 CTA rail stations
 
@@ -71,7 +71,7 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 ---
 
 ### 4. `sales_data_enriched.csv`
-**Source**: sales_data.csv + universe_pin.csv (via PIN join)  
+**Source**: sales_data_raw.csv + universe_pin.csv (via PIN join)  
 **Description**: Sales data joined with property coordinates; geospatial enrichment added
 
 | Column | Data Type | Description | Example | Notes |
@@ -179,7 +179,7 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 
 ### Join Strategy
 1. **Sales + Universe**: PIN-to-PIN join (left join on sales_data)
-   - Source: `sales_data.csv` ← `universe_pin.csv`
+   - Source: `sales_data_raw.csv` ← `universe_pin.csv`
    - Result: Geographic coordinates added to sales records
 
 2. **Distance Calculation**: KDTree nearest-neighbor search
@@ -194,7 +194,7 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 
 ### Data Lineage
 ```
-sales_data.csv (raw)
+sales_data_raw.csv (raw)
     ↓ [PIN join]
     + universe_pin.csv (raw)
     ↓ [Geospatial enrichment via KDTree]

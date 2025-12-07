@@ -17,7 +17,7 @@ rule all:
 # but we only track the main data dependency)
 rule acquire_sales:
     output:
-        sales = f"{DATA_RAW}/sales_data.csv"
+        sales = f"{DATA_RAW}/sales_data_raw.csv"
     notebook:
         "notebooks/01_data_acquisition.ipynb"
 
@@ -25,7 +25,7 @@ rule acquire_sales:
 # Output: PIN locations (universe_pin.csv is the likely file used by R03)
 rule geocoding_pins:
     input:
-        sales = f"{DATA_RAW}/sales_data.csv",
+        sales = f"{DATA_RAW}/sales_data_raw.csv",
         cta = f"{DATA_RAW}/cta_l_stops.geojson" # Assumes CTA GeoJSON is ready or downloaded in R01/R02
     output:
         pins = f"{DATA_INTERIM}/universe_pin.csv" # Notebook 03 explicitly reads this file
@@ -36,7 +36,7 @@ rule geocoding_pins:
 # Output: sales data merged with lon/lat and nearest CTA distance/lines
 rule enrichment:
     input:
-        sales = f"{DATA_RAW}/sales_data.csv",
+        sales = f"{DATA_RAW}/sales_data_raw.csv",
         cta = f"{DATA_RAW}/cta_l_stops.geojson",
         pins = f"{DATA_INTERIM}/universe_pin.csv"
     output:

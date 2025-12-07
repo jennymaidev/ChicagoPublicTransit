@@ -8,4 +8,4 @@
 5. **Analysis** (notebook 05): Statistical analysis and visualizations
 
 ## Data Flow
-sales_data.csv + universe_pin.csv → [PIN join] → [distance calc] → sales_data_enriched.csv → [filtering] → final_cleaned_data.csv
+sales_data_raw.csv + universe_pin.csv → [PIN join] → [distance calc] → sales_data_enriched.csv → [filtering] → final_cleaned_data.csv
