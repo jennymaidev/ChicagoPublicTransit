@@ -10,8 +10,7 @@ DOCUMENTATION = "docs/"
 # The final target: the cleaned data and the executed analysis notebook
 rule all:
     input:
-        f"{DATA_PROCESSED}/final_cleaned_data.csv",
-        "notebooks/05_exploring_analysis_executed.ipynb"
+        f"{DATA_PROCESSED}/final_cleaned_data.csv"
 
 # R01: Acquisition
 # Output: raw sales data (Note: CTA data is also downloaded here implicitly,
@@ -61,6 +60,6 @@ rule analysis:
     input:
         f"{DATA_PROCESSED}/final_cleaned_data.csv"
     output:
-        f"{DOCUMENTATION}/figures""
+        f"{DOCUMENTATION}/figures/"
     notebook:
         "notebooks/05_exploring_analysis.ipynb"
