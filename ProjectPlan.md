@@ -64,11 +64,11 @@ The primary integration strategy involves a series of relational joins and geosp
 | Data Cleaning Scripts | Both | November 3, 2025 | Completed | Script: src/clean.py, Notebook: notebooks/4_data_filtering_cleaning.ipynb |
 | **Phase 4: Reporting & Automation** | | | | |
 | Interim Status Report Submission | Both | November 13, 2025 | Completed | This document (StatusReport.md) |
-| Statistical Analysis & Visualization Script | Shenhua Zhang | November 17, 2025 | In-Progress | Initial correlation and premium calculation in notebooks/5_exploring_analysis.ipynb |
-| Workflow Automation (Snakemake implementation) | Jenny Mai | December 5, 2025 | To Do | Snakefile |
+| Statistical Analysis & Visualization Script | Shenhua Zhang | November 17, 2025 | Completed | Initial correlation and premium calculation in notebooks/5_exploring_analysis.ipynb |
+| Workflow Automation (Snakemake implementation) | Jenny Mai | December 5, 2025 | Completed | Snakefile |
 | **Phase 5: Final Submission** | | | | |
-| Final README.md Report of Findings & Documentation | Shenhua Zhang | December 10, 2025 | To Do | |
-| Final Project Tag/Release & Box Upload | Both | December 10, 2025 | To Do | |
+| Final README.md Report of Findings & Documentation | Shenhua Zhang | December 10, 2025 | Completed | |
+| Final Project Tag/Release & Box Upload | Both | December 10, 2025 | Completed | |
 
 ---
 
