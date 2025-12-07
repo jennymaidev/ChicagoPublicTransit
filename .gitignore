@@ -212,4 +212,5 @@ __marimo__/
 data/processed/
 data/interim/
 data/raw/
-.db
+*.db
+*.pkl
