@@ -37,9 +37,9 @@ We will use three complementary datasets, all sourced from the Cook County or Ci
 
 | Dataset Name | Source/Access Method | Key Data Points & Role |
 | :--- | :--- | :--- |
-| **1. Assessor - Parcel Sales** | Cook County Data Portal (Direct requests CSV Download) | Contains `pin`, `sale_price`, `sale_date`, and various quality flags (`is_multisale`, `deed_type` filters). This is the core dependent variable data. |
-| **2. Assessor - Parcel Universe** | Cook County Data Portal (Socrata API Query) | Contains `pin`, and the property's pre-calculated location: `lon` and `lat`. Essential for integration and geospatial analysis. |
-| **3. CTA Rail Stations** | City of Chicago Open Data (GeoJSON File Download) | Contains precise geospatial coordinates and line color metadata. Essential for the proximity calculation. |
+| **1. Assessor - Parcel Sales** | [Cook County Data Portal](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Sales/wvhk-k5uv/) (Direct requests CSV Download) | Contains `pin`, `sale_price`, `sale_date`, and various quality flags (`is_multisale`, `deed_type` filters). This is the core dependent variable data. |
+| **2. Assessor - Parcel Universe** | [Cook County Data Portal](https://datacatalog.cookcountyil.gov/Property-Taxation/Assessor-Parcel-Universe/nj4t-kc8j/) (Socrata API Query) | Contains `pin`, and the property's pre-calculated location: `lon` and `lat`. Essential for integration and geospatial analysis. |
+| **3. CTA Rail Stations** | [City of Chicago Open Data](https://data.cityofchicago.org/Transportation/CTA-L-Rail-Stations/3tzw-cg4m/) (GeoJSON File Download) | Contains precise geospatial coordinates and line color metadata. Essential for the proximity calculation. |
 
 ### Integration Strategy (Geospatial Enrichment)
 The primary integration strategy involves a series of relational joins and geospatial enrichment steps:
