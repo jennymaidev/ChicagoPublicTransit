@@ -92,7 +92,13 @@ Date field consistency was validated by ensuring that sale dates fell within rec
 
 ### Quality Issues Identified and Resolution
 
-The primary quality issues identified were: (1) Incomplete geographic coordinates for some parcels; (2) Inconsistent property class assignment; (3) Non-market transactions (gifts, inheritances, court-ordered sales) included in the sales dataset; (4) Outlier transactions (extremely high or low prices) reflecting non-residential sales or data errors; (5) Temporal coverage spanning decades, with earlier transactions potentially reflecting different market conditions.
+The primary quality issues identified were:
+
+* (1) Incomplete geographic coordinates for some parcels;
+* (2) Inconsistent property class assignment;
+* (3) Non-market transactions (gifts, inheritances, court-ordered sales) included in the sales dataset;
+* (4) Outlier transactions (extremely high or low prices) reflecting non-residential sales or data errors;
+* (5) Temporal coverage spanning decades, with earlier transactions potentially reflecting different market conditions.
 
 We addressed these issues through systematic filtering applied during the data cleaning phase (documented in Section V below). Rather than removing potentially problematic records preemptively, we retained raw data for reproducibility and applied explicit, documented filtering criteria to create an analytical dataset suitable for our specific research questions.
 
@@ -102,7 +108,11 @@ Our data cleaning process followed a documented, reproducible workflow designed 
 
 ### Cleaning Objectives and Approach
 
-Data cleaning was guided by three principal objectives: (1) ensure homogeneity of the analytical sample to enable valid statistical inference; (2) exclude non-market transactions that would violate assumptions of housing market analysis; (3) remove data quality anomalies and outliers that would introduce bias or violate statistical assumptions.
+Data cleaning was guided by three principal objectives:
+
+* (1) ensure homogeneity of the analytical sample to enable valid statistical inference
+* (2) exclude non-market transactions that would violate assumptions of housing market analysis
+* (3) remove data quality anomalies and outliers that would introduce bias or violate statistical assumptions.
 
 We adopted a filtering approach rather than imputation or transformation, preserving data integrity by documenting all exclusion criteria and retaining raw data in the repository. This approach enables future researchers to apply alternative cleaning criteria if desired, supporting reproducibility and methodological transparency.
 
