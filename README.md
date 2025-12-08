@@ -294,7 +294,7 @@ This command executes all steps in the correct order, with parallel execution wh
 
 ### Data Location in Box
 
-Raw and processed data exceeding GitHub's repository size limits are stored in Box at [INSERT BOX LINK HERE]. Download the complete data folder from Box and extract it to your local project directory:
+Raw and processed data exceeding GitHub's repository size limits are stored in Box at https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte. Download the complete data folder from Box and extract it to your local project directory:
 
 ```bash
 # After downloading from Box:

@@ -13,6 +13,7 @@
 | **Funding** | University of Illinois Urbana-Champaign, IS 477 Data Management, Curation & Reproducibility Course |
 | **Version** | 1.0 |
 | **Repository** | https://github.com/jennymaidev/ChicagoPublicTransit |
+| **Data Storage (Box)** | https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte |
 | **Project Duration** | September 26, 2025 - December 7, 2025 |
 
 ## Datasets Used
