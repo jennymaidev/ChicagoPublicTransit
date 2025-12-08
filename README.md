@@ -142,52 +142,32 @@ Summary statistics for the final analytical dataset are presented in Table 1. Th
 
 ## Findings
 
-Our statistical analysis addressed three interconnected research questions regarding the relationship between public transit accessibility and residential property values in Cook County.
+Our statistical analysis addressed three research questions on transit accessibility and property values in Cook County.
 
-### Research Question 1: Correlation Between Distance to Nearest CTA Station and Sale Price
+### Research Question 1: Distance-Price Correlation
 
-The primary research question examined whether properties in closer proximity to CTA rail stations command higher sale prices, operationalized as a Pearson correlation between minimum distance to nearest CTA station (in meters) and property sale price (in dollars).
-
-We calculated a Pearson correlation coefficient of r = -0.227 (p < 0.001), indicating a statistically significant but weak negative correlation. As distance to the nearest CTA station increases, property sale prices decrease. The coefficient of determination (r²) was 0.052, meaning distance to nearest CTA station explains only 5.2% of property price variance.
-
-Figure 1 visualizes this relationship through a scatter plot with fitted regression line. The substantial scatter around the line illustrates limited predictive power, with properties adjacent to stations showing considerable price variation, indicating that factors beyond transit proximity substantially influence values.
+We calculated a Pearson correlation of r = -0.227 (p < 0.001) between distance to nearest CTA station and sale price—a weak but statistically significant negative correlation. Distance explains only 5.2% of price variance (r² = 0.052). Figure 1 shows substantial scatter, with properties adjacent to stations displaying considerable price variation, indicating factors beyond transit proximity substantially influence values.
 
 ![Figure 1: Distance to Nearest CTA Station vs. Property Sale Price](docs/figures/distance_vs_price_by_class.png)
 *Figure 1: Scatter plot showing the relationship between distance to nearest CTA station (meters) and property sale price (USD), colored by property class. The fitted regression line indicates a weak negative relationship (r = -0.225) between proximity to transit and property values.*
 
-This finding aligns with transit-oriented development literature showing that transit proximity represents one of many factors influencing property values. Unmeasured factors include neighborhood socioeconomics, school quality, street amenities, historical significance, building age, and lot size. The weak but significant correlation indicates that the transit premium is modest and operates within a complex ecosystem of value determinants.
+This aligns with transit-oriented development literature: transit proximity represents one of many factors influencing property values, including neighborhood socioeconomics, school quality, and building characteristics.
 
-### Research Question 2: Influence of Specific CTA Line Color on Distance-Price Relationship
+### Research Question 2: Line-Specific Effects
 
-The second research question examined whether proximity to specific CTA lines (distinguished by their color identifiers: Red, Blue, Brown, Green, Orange, Purple, Pink, Yellow) influences property sale prices differently. We hypothesized that high-capacity lines serving downtown or major employment centers might generate stronger transit premiums than peripheral lines.
-
-Pearson correlations between binary indicators of specific CTA lines and sale price were negligible (|r| < 0.005). The Red Line showed r ≈ -0.004, while other lines ranged from r ≈ -0.003 (Green Line) to r ≈ 0.0005 (Blue Line). The number of transit lines serving a station showed equally negligible correlation (r ≈ -0.0002).
-
-This null finding contrasts with our hypothesis that high-capacity downtown lines would show stronger premiums. Proximity to the Red Line confers no measurable price advantage over other lines, and multi-line transit hubs show no premium over single-line stations. Line-specific effects are negligible; the transit premium is driven by general accessibility rather than individual line characteristics.
-
-Line identity as a sole predictor contributed negligible explanatory power. This finding suggests that transit investments in peripheral lines may yield comparable property value benefits per kilometer to high-capacity line investments, supporting equitable transit expansion without disadvantaging underserved areas.
+Correlations between specific CTA lines and sale price were negligible (|r| < 0.005). The Red Line showed r ≈ -0.004; other lines ranged from r ≈ -0.003 (Green) to r ≈ 0.0005 (Blue). Multi-line transit hubs showed no premium over single-line stations (r ≈ -0.0002). This null finding contrasts with our hypothesis that high-capacity downtown lines would show stronger premiums. The transit premium is driven by general accessibility rather than specific line characteristics, suggesting peripheral line investments may yield comparable property value benefits to high-capacity lines.
 
 ![Figure 2: Distance to Nearest CTA Station vs. Property Sale Price by Number of Transit Lines](docs/figures/distance_vs_price_by_line_num.png)
 *Figure 2: Scatter plot showing the relationship between distance to nearest CTA station and property sale price, stratified by the number of transit lines serving the nearest station (proxy for hub importance). The consistency of negative slopes across categories demonstrates that line-specific effects contribute negligibly to the transit premium.*
 
-### Research Question 3: Joint Influence of Property Class and Distance on Sale Price
+### Research Question 3: Interactive Effects of Class and Distance
 
-The third research question examined the interactive effects of two property characteristics on sale price: residential property class (a proxy for structural characteristics) and distance to nearest CTA station. We hypothesized that the strength of the transit premium might vary by property type.
-
-Collinearity assessment between property class and distance yielded r ≈ -0.01 (p < 0.001), confirming properties of different classes are distributed uniformly across distance bands, eliminating collinearity concerns.
-
-Ordinary least squares regression with the model sale_price ~ class + distance + class × distance achieved R² = 0.392, meaning property class and distance jointly explain 39.2% of price variance—a substantial improvement over the 5.2% explained by distance alone.
-
-The main effect coefficient for distance was approximately -\$0.48 per meter, indicating that each additional meter of distance to the nearest CTA station is associated with a \$0.48 decrease in property sale price, holding property class constant. Converting to more interpretable units, this represents a \$48 decrease per 100 meters of additional distance, or approximately \$4,800 per additional kilometer. For a property at the median distance (4.64 km from nearest station), this implies a transit premium of approximately \$13,900 relative to a property 7 km away.
-
-The property class coefficient was highly significant (p < 0.001), indicating structural characteristics substantially influence price. The interaction term (class × distance) was significant (p < 0.001) but modest in magnitude, showing the distance-price relationship varies slightly by property type.
-
-Figure 3 visualizes this interaction effect across representative property classes. While slopes differ slightly, the general downward trend (greater distance → lower prices) remains consistent across property types.
+Ordinary least squares regression (sale_price ~ class + distance + class × distance) achieved R² = 0.392, with property class and distance jointly explaining 39.2% of price variance—substantially improving the 5.2% explained by distance alone. The distance coefficient was -\$0.48 per meter (\$4,800/km), meaning a property at median distance (4.64 km) commands a \$13,900 premium over one at 7 km. Property class was highly significant (p < 0.001), while the interaction term (class × distance) showed significance but modest magnitude. Figure 3 confirms consistent downward trends across property classes despite slight slope variations.
 
 ![Figure 3: Distance to Nearest CTA Station vs. Property Sale Price by Property Class](docs/figures/distance_vs_price_by_class.png)
 *Figure 3: Scatter plot with fitted regression lines showing the relationship between distance to nearest CTA station and property sale price, stratified by property class (202-209). The parallel slopes across classes indicate consistent distance effects regardless of property type, with class primarily affecting the intercept (baseline price level).*
 
-Figure 4 displays a correlation matrix of property class, distance, and sale price, confirming low correlation between class and distance (r ≈ -0.01) and validating minimal multicollinearity.
+Figure 4 confirms low correlation between class and distance (r ≈ -0.01), validating minimal multicollinearity.
 
 ![Figure 4: Correlation Matrix - Property Class, Transit Distance, and Sale Price](docs/figures/correlation_heatmap.png)
 *Figure 4: Heatmap of the correlation matrix showing relationships between property class, distance to nearest CTA station, and sale price. The low off-diagonal correlations (|r| < 0.2) confirm minimal multicollinearity, supporting the validity of regression coefficient estimates.*
