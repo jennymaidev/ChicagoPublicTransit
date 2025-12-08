@@ -67,8 +67,8 @@ The primary integration strategy involves a series of relational joins and geosp
 | Statistical Analysis & Visualization Script | Shenhua Zhang | November 17, 2025 | Completed | Initial correlation and premium calculation in notebooks/5_exploring_analysis.ipynb |
 | Workflow Automation (Snakemake implementation) | Jenny Mai | December 5, 2025 | Completed | Snakefile |
 | **Phase 5: Final Submission** | | | | |
-| Final README.md Report of Findings & Documentation | Shenhua Zhang | December 10, 2025 | Completed | |
-| Final Project Tag/Release & Box Upload | Both | December 10, 2025 | Completed | |
+| Final README.md Report of Findings & Documentation | Shenhua Zhang | December 7, 2025 | Completed | README.md (355 lines, ~3700 words), all figures integrated |
+| Final Project Tag/Release & Box Upload | Both | December 7, 2025 | Completed | GitHub release tag: final-project, Box link: https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte |
 
 ---
 
