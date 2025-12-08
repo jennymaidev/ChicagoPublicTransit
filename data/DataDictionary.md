@@ -215,7 +215,7 @@ sales_data_raw.csv (raw)
 ```
 Mai, J., & Zhang, S. (2025). Final cleaned dataset: Chicago Transit Impact on Property Values.
 University of Illinois IS 477 Course Project.
-Retrieved from [Box folder link]
+Retrieved from https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte.
 ```
 
 ---

@@ -61,8 +61,8 @@
 
 | Aspect | Details |
 |--------|---------|
-| **Raw Data Location** | [Box Folder Link - to be added] |
-| **Processed Data Location** | [Box Folder Link - to be added] |
+| **Raw Data Location** | https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte |
+| **Processed Data Location** | https://uofi.box.com/s/90qg970raf1p20hqmwn1cu4lccqmevte |
 | **Code Repository** | https://github.com/jennymaidev/ChicagoPublicTransit |
 | **Final Dataset** | `data/processed/final_cleaned_data.csv` |
 | **Box Access Instructions** | Download from Box; extract to `data/raw/`, `data/interim/`, `data/processed/` folders |
