@@ -5,14 +5,14 @@ import sqlite3
 import os
 
 # Configuration
-RAW_DATA_DIR = '../data/raw/'
-INTERIM_DATA_DIR = '../data/interim/'
-DB_PATH = '../data/project_data.db'
+RAW_DATA_DIR = './data/raw/'
+INTERIM_DATA_DIR = './data/interim/'
+DB_PATH = './data/project_data.db'
 
 FILES_TO_LOAD = {
     'sales_data_raw.csv': {'directory': RAW_DATA_DIR, 'table': 'raw_sales'},
     'cta_l_stops.geojson': {'directory': RAW_DATA_DIR, 'table': 'raw_cta'},
-    'universe_pin_locations.txt': {'directory': INTERIM_DATA_DIR, 'table': 'raw_universe'} # Now points to interim
+    'universe_pin.txt': {'directory': INTERIM_DATA_DIR, 'table': 'raw_universe'} # Now points to interim
 }
 
 def load_data_to_sqlite():
