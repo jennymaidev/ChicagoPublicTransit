@@ -89,9 +89,9 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 | `is_multisale` | Boolean | Multisale flag | `0` or `1` | |
 | `deed_type` | String | Deed type | `WARRANTY DEED` | |
 
-**Record Count**: ~1,700,000+ (subset of sales with valid coordinates)
+**Record Count**: 1,785,902 (enriched sales with valid coordinates)
 **Key Transformation**: Geospatial enrichment using scipy.spatial.KDTree for nearest-neighbor distance calculation
-**Missing Values**: 5% (properties without valid coordinates)
+**Missing Values**: Minimal (properties without valid coordinates removed prior to enrichment)
 
 ---
 
@@ -122,19 +122,19 @@ This document describes all datasets used in the project: "Analyzing Public Tran
 |--------|-----------|-------------|-------------|-----------|
 | `pin` | String | 14-digit Property Index Number | [0-9]{14} | 0% |
 | `year` | Integer | Sale year | 2018-2024 | 0% |
-| `sale_price` | Float | Sale price in USD | $50,000 - $2,000,000 | <1% |
+| `sale_price` | Float | Sale price in USD | $25,000 - $1,550,000 | <1% |
 | `latitude` | Float | Property latitude (WGS84) | 41.5 - 42.2 | 0% |
 | `longitude` | Float | Property longitude (WGS84) | -88.2 - -87.4 | 0% |
-| `min_distance_meters` | Float | Distance to nearest CTA station (meters) | 0 - ~50,000 | 0% |
+| `min_distance_meters` | Float | Distance to nearest CTA station (meters) | 30 - 34,227 | 0% |
 | `nearest_cta_station` | String | Name of nearest CTA station | Valid station names | <1% |
 | `nearest_cta_lines` | String | CTA lines at nearest station | Line colors (Red, Blue, etc.) | <1% |
 | `class` | Integer | Property class code | 202, 203, 204, 205, 206, 207, 208, 209 | 0% |
 | `is_multisale` | Boolean | Multisale flag | 0 | 0% (filtered out) |
 | `deed_type` | String | Deed type | WARRANTY DEED | 0% (non-market excluded) |
 
-**Record Count**: ~122,000 properties
+**Record Count**: 124,438 properties
 **Time Period**: 2018-2024 (7 years)
-**Geographic Coverage**: City of Chicago  
+**Geographic Coverage**: Cook County (includes Chicago and suburbs)  
 **Data Quality**: High (outliers removed, missing values <1%)
 
 ---
