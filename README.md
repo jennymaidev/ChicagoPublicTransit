@@ -192,12 +192,6 @@ To further assess the relationships between predictor variables, we generated a 
 ![Figure 4: Correlation Matrix - Property Class, Transit Distance, and Sale Price](docs/figures/correlation_heatmap.png)
 *Figure 4: Heatmap of the correlation matrix showing relationships between property class, distance to nearest CTA station, and sale price. The low off-diagonal correlations (|r| < 0.2) confirm minimal multicollinearity, supporting the validity of regression coefficient estimates.*
 
-### Summary of Findings
-
-Collectively, our findings indicate a statistically significant but modest relationship between public transit accessibility and residential property values in Cook County. Properties in closer proximity to CTA rail stations command price premiums, but the effect is weak in magnitude and explains limited variance in property prices. Notably, line-specific effects are negligible: proximity to specific high-capacity or well-utilized lines (such as the Red Line) confers no meaningful price advantage relative to other lines. This suggests that the transit premium is driven by general accessibility to public transit infrastructure rather than specific characteristics of individual transit lines. Property class, representing structural and size characteristics, is a substantially stronger price determinant than transit proximity alone, but transit accessibility remains a significant factor independent of property type.
-
-These findings are consistent with the broader housing economics literature, which demonstrates that transit access represents one of many factors influencing property values. The modest magnitude of the transit premium (approximately \$4,800 per additional kilometer of distance) suggests that while transit investments yield property value benefits, these benefits are modest relative to the capital investments required for transit system development and maintenance.
-
 ## Future Work
 
 This project successfully demonstrated the feasibility of integrating large-scale public datasets to address questions in urban economics. However, our findings also revealed important opportunities for extending and refining this analysis.
